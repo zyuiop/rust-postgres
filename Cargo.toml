@@ -14,3 +14,11 @@ resolver = "2"
 
 [profile.release]
 debug = 2
+
+
+
+[patch.crates-io]
+socket2 = { git = "https://github.com/hermit-os/socket2.git", branch = "v0.5.x" }
+socket2-dot6x = { git = "https://github.com/zyuiop/socket2.git", package = "socket2", branch = "v0.6.x"}
+tokio = { git = "https://github.com/zyuiop/tokio.git", branch = "v/tokio-1.45.0" }
+whoami = { git = "https://github.com/zyuiop/whoami.git", branch = "v1.6.x" }

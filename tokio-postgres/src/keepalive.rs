@@ -16,7 +16,8 @@ impl From<&KeepaliveConfig> for TcpKeepalive {
             target_os = "aix",
             target_os = "redox",
             target_os = "solaris",
-            target_os = "openbsd"
+            target_os = "openbsd",
+            target_os = "hermit"
         )))]
         if let Some(interval) = keepalive_config.interval {
             tcp_keepalive = tcp_keepalive.with_interval(interval);
@@ -27,7 +28,8 @@ impl From<&KeepaliveConfig> for TcpKeepalive {
             target_os = "redox",
             target_os = "solaris",
             target_os = "windows",
-            target_os = "openbsd"
+            target_os = "openbsd",
+            target_os = "hermit"
         )))]
         if let Some(retries) = keepalive_config.retries {
             tcp_keepalive = tcp_keepalive.with_retries(retries);
